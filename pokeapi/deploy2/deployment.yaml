@@ -1,28 +1,26 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pokeapi
+  name: pokeapi-instance2
 spec:
-  replicas: 2
-  revisionHistoryLimit: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: pokeapi
+      app: pokeapi-instance2
   template:
     metadata:
       labels:
-        app: pokeapi
+        app: pokeapi-instance2
     spec:
       containers:
-      - image: pokeapi:0.1 
-        name: pokeapi
+      - name: pokeapi
+        image: pokeapi:0.1
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         env:
         - name: POKEDEX_NAME
-          value: "MyPokedex"
+          value: "Instance2Pokedex"
         - name: POKEDEX_START_NUMBER
-          value: "1"
+          value: "152"
         - name: POKEDEX_END_NUMBER
-          value: "151"
+          value: "300"
