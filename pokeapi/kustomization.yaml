@@ -4,5 +4,5 @@ kind: Kustomization
 namespace: pokedox-kustomize
 
 resources:
-- deply1/
+- deploy1/
 - deploy2/
