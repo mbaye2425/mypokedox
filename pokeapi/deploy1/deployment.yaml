@@ -16,7 +16,7 @@ spec:
       - name: pokeapi
         image: pokeapi:0.1
         ports:
-        - containerPort:3000
+        - containerPort: 3000
         env:
         - name: POKEDEX_NAME
           value: "Instance1Pokedex"
