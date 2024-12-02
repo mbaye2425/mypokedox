@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: pokeapi-instance1
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: pokeapi-instance1
@@ -16,7 +16,7 @@ spec:
       - name: pokeapi
         image: pokeapi:0.1
         ports:
-        - containerPort: 80
+        - containerPort:3000
         env:
         - name: POKEDEX_NAME
           value: "Instance1Pokedex"
